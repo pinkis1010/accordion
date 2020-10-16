@@ -1,0 +1,65 @@
+{
+    "id": 1,
+    "username": "fortis@fortishealthcare.com",
+    "email": "fortis@fortishealthcare.com",
+    "firstName": "Samuel",
+    "lastName": "Colt",
+    "dob": 515356200000,
+    "documentId": null,
+    "mobile": "545-454-5555",
+    "uhid": null,
+    "gender": "Female",
+    "profile_pic": null,
+    "bmi": null,
+    "primarySkill": null,
+    "secondarySkill": null,
+    "specialization": "Bsc Nursing",
+    "designation": "Chemist",
+    "bloodGroup": null,
+    "emergencyContactName": null,
+    "emergencyPhoneNumber": null,
+    "streetAddress": "Noida",
+    "country": null,
+    "department": {
+        "id": 1,
+        "name": "Hospital",
+        "createdDate": 1,
+        "lastModifiedDate": 1,
+        "createdBy": 1,
+        "lastModifiedBy": 1
+    },
+    "roles": [
+        {
+            "id": 8,
+            "role": "PROVIDER",
+            "createdDate": 1,
+            "lastModifiedDate": 1,
+            "createdBy": 1,
+            "lastModifiedBy": 1
+        }
+    ],
+    "services": [
+        {
+            "id": 2,
+            "name": "User Management",
+            "createdDate": 1,
+            "lastModifiedDate": 1,
+            "createdBy": 1,
+            "lastModifiedBy": 1
+        },
+        {
+            "id": 1,
+            "name": "Manage Patient Requests",
+            "createdDate": 1,
+            "lastModifiedDate": 1,
+            "createdBy": 1,
+            "lastModifiedBy": 1
+        }
+    ],
+    "servicesAccess": null,
+    "orgBranches": [],
+    "createdDate": 1,
+    "lastModifiedDate": 1,
+    "createdBy": 1,
+    "lastModifiedBy": 1
+}

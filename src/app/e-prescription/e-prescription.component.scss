@@ -1,0 +1,649 @@
+@import './../../assets/variables';
+
+.prescription-head {
+  padding: 10px 0;
+  border-bottom: 1px solid $divider;
+
+  
+
+  h4 {
+    color: $input-color;
+   
+  }
+}
+
+.prescription-accordion {
+  margin-top: 30px;
+
+ 
+
+  .icon-add {
+    position: absolute;
+    top: 12px;
+    right: 47px;
+    font-size: 20px;
+    z-index: 2;
+  }
+
+  .panel {
+    & + .panel {
+      margin-top: 20px;
+
+     
+    }
+
+    &.panel-open {
+      .card-header {
+        border-bottom: 1px solid $btn-border;
+      }
+    }
+
+    .card-header {
+      border: 0;
+      padding: 10px 20px;
+      border-bottom: 1px solid transparent;
+      border-top: 1px solid transparent;
+
+     
+
+      .panel-title {
+        margin-top: 0.5px;
+      }
+    }
+
+    .card-body {
+      padding: 0;
+      background: $white;
+    }
+
+    .card {
+      border-radius: 0;
+      border: 1px solid $btn-border;
+      padding-bottom: 1px;
+      background: $accordian-bg;
+
+      .panel-heading {
+        background-color: $accordian-bg;
+
+        .btn {
+          padding: 0;
+          color: $input-color;
+         
+
+          &:hover,
+          &:focus {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// For toggle Arrow
+.accordion-toggle {
+  &::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: url('/assets/images/dropdown.svg') no-repeat;
+    background-size: 100%;
+    transition: 0.3s all;
+  }
+
+  &[aria-expanded='false'] {
+    &::before {
+      transform: rotate(0);
+    }
+  }
+
+  &[aria-expanded='true'] {
+    &::before {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+
+
+// section 7 Previous Investigations
+.select-investigations-btn {
+  .btn-outline-primary {
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    background: $white;
+    padding: 6px 17px;
+
+    &:hover {
+      background: $primary;
+    }
+
+   
+  }
+}
+
+.pre-investigations-section {
+  padding: 15px 0;
+
+  .pre-investigations-head {
+    color: $input-color;
+    position: relative;
+
+    .pre-investigations-row {
+     
+
+      .pre-investigations-col {
+      
+        .icon-delete {
+         
+        }
+      }
+    }
+  }
+
+  .pre-investigations-body {
+    .pre-investigations-row {
+      
+
+      &:nth-child(even) {
+        background: $listbg;
+
+        
+      }
+
+      .pre-investigations-col {
+        
+
+        .mobile-date {
+         
+        }
+
+        &:first-child {
+          &::before {
+           
+          }
+        }
+      }
+    }
+  }
+
+  
+}
+
+
+
+
+
+// section 9 Suggested Lab Investigations
+.lab-test-name {
+  .radio-btn {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+
+    & + .radio-btn {
+      margin-left: 0;
+    }
+
+    label {
+      padding: 9px 15px;
+    }
+  }
+}
+
+.suggested-lab-section {
+  padding: 25px 20px;
+ 
+
+  .row {
+    .col-md-4 {
+      & + .col-md-4 {
+        
+      }
+    }
+  }
+
+  .timing-wrap {
+    span {
+      width: auto;
+      min-width: 82px;
+      padding: 9px 15px;
+      margin-right: 10px;
+      margin-top: 10px;
+
+      & + span {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// section 11 follow up section
+.follow-up-section {
+  padding: 25px 20px;
+
+  
+
+  .small-head {
+    color: $input-color;
+   
+    margin-bottom: 20px;
+  }
+
+  .col-md-6 {
+    &:last-child {
+      .small-head {
+       
+      }
+    }
+  }
+
+  .icon-calendar,
+  .icon-clock-small {
+    position: absolute;
+    top: 27px;
+    right: 3px;
+  }
+}
+
+.prescription-action-wrap {
+  position: relative;
+  padding-top: 25px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    right: -40px;
+    background: $divider;
+    height: 1px;
+
+    @media (max-width: 1100px) {
+      left: -18px;
+      right: -18px;
+    }
+
+    
+  }
+
+  .btn {
+    
+
+    & + .btn {
+      margin-left: 10px;
+
+      
+    }
+  }
+}
+
+.item-upload {
+  position: absolute;
+  width: 75px;
+  background: $btn-border;
+  height: 3px;
+  bottom: 9px;
+  border-radius: 3px;
+
+  .item-upload-progress {
+    display: block;
+    height: 100%;
+    border-radius: 8px;
+    background-image: linear-gradient(to right, $upload-to, $upload-from);
+  }
+
+  .item-upload-num {
+    position: absolute;
+    font-size: 10px;
+    color: $input-color;
+    top: -15px;
+    right: 20px;
+  }
+}
+
+.follow-up-warp {
+  .panel-collapse {
+    &.collapse {
+      overflow: inherit !important;
+      opacity: 0 !important;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+
+      &.show {
+        opacity: 1 !important;
+      }
+    }
+  }
+}
+
+// Style for filter investigations popup
+.filter-wrap {
+  border: 1px solid $input-border;
+
+  .search-wrap {
+    padding: 1px 0 1px 1px;
+    border-bottom: 1px solid $input-border;
+
+    
+
+    .form-control {
+      border: 0;
+    }
+  }
+}
+
+.filter-wrap-accordian {
+  padding: 10px 0 0 1px;
+
+  .card {
+    border: 0;
+
+    .card-header {
+      background-color: transparent;
+      border: 0;
+      padding: 6px 10px;
+    }
+
+    .card-body {
+      padding: 8px 10px 8px 35px;
+
+      .custom-control {
+        & + .custom-control {
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+
+  .custom-checkbox {
+    .custom-control-label {
+      padding-right: 35px;
+    }
+  }
+
+  .accordion-toggle {
+    &::before {
+      width: 26px;
+      height: 26px;
+      position: absolute;
+      right: 10px;
+      top: 5px;
+      transition: 0s all;
+      z-index: 2;
+    }
+
+    &[aria-expanded='false'] {
+      &::before {
+        background: url('/assets/images/plus.svg') no-repeat;
+        background-size: 100%;
+      }
+    }
+
+    &[aria-expanded='true'] {
+      &::before {
+        background: url('/assets/images/minus.svg') no-repeat;
+        background-size: 100%;
+        transform: rotate(0);
+      }
+    }
+  }
+}
+
+.other-section {
+  padding: 7px 10px 20px 10px;
+
+  .custom-input {
+    padding-left: 34px;
+  }
+}
+
+.scrolling-area {
+  max-height: calc(100vh - (248px + 3.5rem));
+
+ 
+}
+
+// coming-soon button
+
+
+// Start style for prescription-preview
+
+.prescription-preview-container {
+  border: 1px solid $btn-border;
+
+ 
+}
+
+.prescription-preview-head {
+  border-bottom: 1px solid $divider;
+  padding: 25px 45px 25px 25px;
+  line-height: 20px;
+
+ 
+
+  img {
+    max-width: 115px;
+    object-fit: contain;
+
+   
+  }
+}
+
+.prescription-preview-body {
+  padding: 25px;
+
+ 
+}
+
+.head-section {
+  .show-date-time {
+    p {
+      & + p {
+        margin-left: 50px;
+      }
+
+      span {
+       
+        color: $primary;
+      }
+    }
+  }
+}
+
+// Style for patient details
+.view-patient-details {
+  border: solid 1px $btn-border;
+  background-color: $accordian-bg;
+  padding: 10px 30px 10px 15px;
+  line-height: 23px;
+
+  .normal-text {
+    flex: none;
+    width: 72px;
+
+    &.wid-45 {
+      width: 45px;
+
+     
+    }
+  }
+
+  .bold-lebel-text {
+    padding-left: 35px;
+  }
+}
+
+.card-table {
+  border: solid 1px $btn-border;
+
+  .card-table-row {
+    padding: 10px 10px 10px 15px;
+    min-height: 40px;
+
+    
+
+    &:nth-child(odd) {
+      background: $accordian-bg;
+    }
+
+    p {
+      padding-left: 10px;
+    }
+
+    .date {
+      width: 65px;
+      flex: none;
+    }
+
+    .pdf-download-link {
+      color: $input-color;
+      text-decoration: underline;
+      display: inline-block;
+      padding: 0 10px;
+      flex: 1;
+    }
+  }
+}
+
+.view-follow-up-section {
+}
+
+.prescription-preview-modal-body {
+  padding: 0 50px 50px 50px;
+  max-width: 1200px;
+  margin: auto;
+
+ 
+
+  .innerpage-title {
+    border: 0;
+    padding: 30px 0;
+
+   
+
+    h4 {
+     
+    }
+
+    .btn-outline-primary {
+      padding: 9px 20px;
+
+      
+    }
+  }
+}
+
+// End style for prescription-preview
+
+// Start style view health record list
+.health-record-list {
+  .modal-header {
+    border: 0;
+    padding: 25px 27px 17px 27px;
+
+   
+
+    .modal-title {
+     
+      color: $input-color;
+    }
+
+    .close {
+      display: block;
+      position: relative;
+      right: auto;
+      top: auto;
+      margin: 0;
+      padding: 0;
+
+      &::after,
+      &::before {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 0 27px 25px 27px;
+
+    
+  }
+
+  .show-all-records {
+    .record-box {
+      border-radius: 1px;
+      border: solid 1px $btn-border;
+      box-shadow: none;
+      padding: 12px 10px 12px 15px;
+      position: relative;
+
+      & + .record-box {
+        margin-top: 10px;
+      }
+
+      .pdf-details {
+        width: calc(100% - 31px);
+
+        span {
+          word-break: break-all;
+          display: block;
+          padding-right: 20px;
+        }
+      }
+
+      .icon-edit {
+        font-size: 20px;
+        position: absolute;
+        top: 13px;
+        right: 11px;
+      }
+    }
+  }
+}
+
+.filter-link {
+  margin-right: 12px;
+  color: $input-color;
+
+  .icon-filter {
+    font-size: 11px;
+    margin-right: 8px;
+  }
+}
+
+.search-health-record {
+  margin-bottom: 20px;
+  border-top: solid 1px $disable-checkbox-bg;
+  padding-top: 15px;
+
+  .search-wrap {
+    margin: 0;
+    width: calc(100% - 130px);
+    max-width: calc(100% - 130px);
+
+   
+  }
+
+  .select-custom {
+    width: 120px;
+    margin-left: 10px;
+
+   
+  }
+}
+
+
+
+
+.delete-all-btn {
+  position: absolute;
+  top: 11px;
+  right: 45px;
+  &.medicines {
+    right: 88px;
+  }
+}
