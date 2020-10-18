@@ -1,23 +1,27 @@
 <div class="page-container pb-25">
- 
+ <div class="tabContainer">
+   <ul>
+    <li><a class="active">abcc</a></li>
+    <li><a>fff</a></li>
+    <li><a>fddddddddddddddd</a></li>
+   </ul>
+ </div>
 
   <div class="prescription-accordion" #myDiv>
     <accordion [isAnimated]="false">
      
       
       <accordion-group heading="Investigations" isOpen="true" >
-        <div class="select-investigations-btn text-right">
-          <div class="btn-group" data-toggle="buttons">
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option1"> Option 1
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option2"> Option 2
-            </label>
-            <label class="btn btn-primary">
-              <input type="radio" name="options" id="option3"> Option 3
-            </label>
-      </div>
+        <div class="icon-add">
+          <div class="radio-toolbar">
+            <input type="radio" id="radioApple" name="radioFruit" value="Yes" checked>
+            <label for="radioApple">Applicable</label>
+        
+            <input type="radio" id="radioBanana" name="radioFruit" value="No">
+            <label for="radioBanana">Not Applicable</label>
+        
+            
+        </div>
         </div>
         <div class="pre-investigations-section">
          Hi
